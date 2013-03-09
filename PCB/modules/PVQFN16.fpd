@@ -1,0 +1,118 @@
+/* MACHINE-GENERATED ! */
+
+frame pad_e {
+	set name = Nx+ny+1
+
+	ce: vec @(Ox/2-Of, pos)
+	ll: vec .(0mil, Pw/2)
+	ur: vec .(-L, -Pw)
+	pad "$name" ll .
+}
+
+frame pad_w {
+	set name = 2*(Nx+Ny)-ny
+
+	cw: vec @(-Ox/2+Of, pos)
+	ll: vec .(0mil, Pw/2)
+	ur: vec .(L, -Pw)
+	pad "$name" ll .
+}
+
+frame pad_n {
+	set name = nx+1
+
+	nc: vec @(pos, Oy/2-Of)
+	ll: vec .(-Pw/2, 0mm)
+	ur: vec .(Pw, -L)
+	pad "$name" ll .
+}
+
+frame pad_s {
+	set name = 2*Nx+Ny-nx
+
+	sc: vec @(pos, -Oy/2+Of)
+	ll: vec .(-Pw/2, 0mm)
+	ur: vec .(Pw, L)
+	pad "$name" ll .
+}
+
+frame pads_y {
+	set pos = (Ny/2-ny-0.5)*e
+
+	loop ny = 0, Ny-1
+
+	frame pad_w @
+	frame pad_e @
+}
+
+frame pads_x {
+	set pos = (nx-Nx/2+0.5)*e
+
+	loop nx = 0, Nx-1
+
+	frame pad_s @
+	frame pad_n @
+}
+
+frame pads {
+	set Nx = 4
+
+	set Ny = 4
+
+	frame pads_x @
+	frame pads_y @
+}
+
+frame c_pad {
+	ll: vec @(-Cx/2, -Cy/2)
+	ur: vec @(Cx/2, Cy/2)
+	pad "PAD" ll .
+}
+
+frame center {
+	set Cx = 2.16mm
+
+	set Cy = 2.16mm
+
+	ll: vec @(-Cx/2, -Cy/2)
+	ur: vec @(Cx/2, Cy/2)
+	pad "PAD" ll .
+}
+
+frame outline {
+	ll: vec @(-Ox/2, -Oy/2)
+	ur: vec @(Ox/2, Oy/2)
+	rect ll . silk
+}
+
+package "PVQFN16"
+unit mm
+
+set Ox = 4.8mm
+
+set Oy = 4.8mm
+
+set e = 0.65mm
+
+set silk = 0.1mm
+
+set Pw = 0.3mm
+
+set L = 1mm
+
+set Of = 0mm
+
+__2: vec @(-1.7mm, 1.7mm)
+__3: vec .(0.2mm, 0mm)
+circ __2 . silk
+frame outline @
+frame center @
+frame pads @
+measx pad_n.ll >> pad_n.ur 100mil
+measx pad_n.nc >> pad_n.nc 70mil
+measx pad_n.nc -> pad_n.nc 40mil
+measx outline.ll >> outline.ur Oy+130mil
+measy pad_w.cw >> pad_w.cw 40mil
+measy pad_w.ll -> pad_w.ur 20mil
+measy pad_w.ur >> pad_w.ll 70mil+L
+measy outline.ll >> outline.ur 100mil
