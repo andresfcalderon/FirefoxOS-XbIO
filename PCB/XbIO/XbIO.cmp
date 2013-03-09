@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew date = Mon 10 Sep 2012 02:31:45 PM COT
+Cmp-Mod V01 Created by PcbNew date = Sat 09 Mar 2013 01:15:15 PM COT
 
 BeginCmp
 TimeStamp = /50294AB9;
@@ -368,28 +368,28 @@ BeginCmp
 TimeStamp = /5046513C;
 Reference = P1;
 ValeurCmp = CONN_2;
-IdModule  = bornier2;
+IdModule  = PIN_ARRAY-6X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /5046513F;
 Reference = P2;
 ValeurCmp = CONN_2;
-IdModule  = bornier2;
+IdModule  = PIN_ARRAY-6X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /50465142;
 Reference = P3;
 ValeurCmp = CONN_2;
-IdModule  = bornier2;
+IdModule  = PIN_ARRAY-6X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /50465144;
 Reference = P4;
 ValeurCmp = CONN_2;
-IdModule  = bornier2;
+IdModule  = PIN_ARRAY-6X1;
 EndCmp
 
 BeginCmp

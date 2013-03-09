@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 09 Mar 2013 11:41:18 AM COT
+EESchema Schematic File Version 2  date Sat 09 Mar 2013 02:26:11 PM COT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,7 +36,6 @@ LIBS:tq-relay
 LIBS:ps2802-4
 LIBS:sw_push
 LIBS:cd4049
-LIBS:XbIO-cache
 EELAYER 27 0
 EELAYER END
 $Descr User 20000 12000
@@ -661,13 +660,13 @@ F 2 "SM0805" H 7000 1050 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 1400 4550 0    60   ~ 0
-nDCIN1
+PB9
 Text Label 1400 4450 0    60   ~ 0
-nDCIN2
+PB8
 Text Label 1400 4350 0    60   ~ 0
-nDCIN3
+PB7
 Text Label 1400 4250 0    60   ~ 0
-nDCIN6
+PB6
 Text Label 5228 3050 0    60   ~ 0
 nDCIN5
 Text Label 5228 2750 0    60   ~ 0
@@ -832,9 +831,9 @@ Wire Wire Line
 Wire Wire Line
 	2000 9550 2200 9550
 Wire Wire Line
-	2000 9650 2000 9800
+	2000 9800 2000 9650
 Wire Wire Line
-	2000 9800 1250 9800
+	1250 9800 2000 9800
 Wire Wire Line
 	1250 9800 1250 9650
 Wire Wire Line
@@ -904,9 +903,9 @@ Connection ~ 7000 750
 Wire Wire Line
 	7000 650  7000 850 
 Wire Wire Line
-	7350 850  7350 750 
+	7350 750  7350 850 
 Wire Wire Line
-	7350 750  6550 750 
+	6550 750  7350 750 
 Wire Wire Line
 	6550 750  6550 850 
 Wire Wire Line
@@ -921,13 +920,13 @@ Wire Wire Line
 	8100 750  8150 750 
 Connection ~ 7650 2100
 Wire Wire Line
-	7650 2200 7650 2100
+	7650 2100 7650 2200
 Connection ~ 7650 2700
 Wire Wire Line
-	7650 2600 7650 2700
+	7650 2700 7650 2600
 Connection ~ 7350 2700
 Wire Wire Line
-	7350 2600 7350 2700
+	7350 2700 7350 2600
 Connection ~ 7050 2700
 Wire Wire Line
 	7050 2600 7050 2700
@@ -937,10 +936,10 @@ Wire Wire Line
 Wire Wire Line
 	6750 2700 8100 2700
 Wire Wire Line
-	8100 2800 8100 2600
+	8100 2600 8100 2800
 Connection ~ 7350 2100
 Wire Wire Line
-	7350 2200 7350 2100
+	7350 2100 7350 2200
 Connection ~ 7050 2100
 Wire Wire Line
 	7050 2100 7050 2200
@@ -961,7 +960,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 6950 4450 7050
 Wire Wire Line
-	3500 6950 3200 6950
+	3200 6950 3500 6950
 Connection ~ 9850 1350
 Wire Wire Line
 	9850 1250 9850 1450
@@ -975,9 +974,9 @@ Connection ~ 9850 750
 Wire Wire Line
 	9850 650  9850 850 
 Wire Wire Line
-	10200 850  10200 750 
+	10200 750  10200 850 
 Wire Wire Line
-	10200 750  9400 750 
+	9400 750  10200 750 
 Wire Wire Line
 	9400 750  9400 850 
 Wire Wire Line
@@ -998,9 +997,9 @@ Connection ~ 3400 800
 Wire Wire Line
 	3400 850  3400 800 
 Wire Wire Line
-	3500 850  3500 800 
+	3500 800  3500 850 
 Wire Wire Line
-	3500 800  3200 800 
+	3200 800  3500 800 
 Wire Wire Line
 	3200 800  3200 850 
 Connection ~ 750  1850
@@ -1011,15 +1010,15 @@ Connection ~ 600  2150
 Wire Wire Line
 	750  2150 600  2150
 Wire Wire Line
-	600  2250 600  1550
+	600  1550 600  2250
 Wire Wire Line
 	600  1550 750  1550
 Connection ~ 1200 2150
 Connection ~ 1200 1550
 Wire Wire Line
-	800  1900 750  1900
+	750  1900 800  1900
 Wire Wire Line
-	750  1900 750  1800
+	750  1800 750  1900
 Wire Wire Line
 	750  1800 800  1800
 Wire Wire Line
@@ -1170,4 +1169,136 @@ Wire Wire Line
 	1700 1500 2000 1500
 Wire Wire Line
 	5050 8700 5650 8700
+$Comp
+L +5V #PWR032
+U 1 1 513B72DF
+P 1200 9400
+F 0 "#PWR032" H 1200 9490 20  0001 C CNN
+F 1 "+5V" H 1200 9490 30  0000 C CNN
+	1    1200 9400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 9400 1200 9400
+$Comp
+L CONN_6 P2
+U 1 1 513B7F29
+P 10050 7200
+F 0 "P2" V 10000 7200 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 10100 7200 60  0000 C CNN
+	1    10050 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_6 P1
+U 1 1 513B7F56
+P 10050 6350
+F 0 "P1" V 10000 6350 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 10100 6350 60  0000 C CNN
+	1    10050 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_6 P4
+U 1 1 513B7F66
+P 7000 6150
+F 0 "P4" V 6950 6150 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 7050 6150 60  0001 C CNN
+	1    7000 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_6 P3
+U 1 1 513B7F6C
+P 7000 6850
+F 0 "P3" V 6950 6850 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 7050 6850 60  0001 C CNN
+	1    7000 6850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2000 6150 1600 6150
+Text Label 1600 6150 0    60   ~ 0
+PC13
+Wire Wire Line
+	7350 6300 7800 6300
+Text Label 7550 6300 0    60   ~ 0
+PC13
+Wire Wire Line
+	5350 1800 4950 1800
+Text Label 5100 1800 0    60   ~ 0
+PC14
+Wire Wire Line
+	5350 1900 4950 1900
+Text Label 5100 1900 0    60   ~ 0
+PC15
+Wire Wire Line
+	7350 6400 7800 6400
+Text Label 7550 6400 0    60   ~ 0
+PC14
+Wire Wire Line
+	7350 6600 7800 6600
+Text Label 7550 6600 0    60   ~ 0
+PC15
+Text Label 7600 6200 0    60   ~ 0
+PB9
+Text Label 7600 6100 0    60   ~ 0
+PB8
+Text Label 7600 6000 0    60   ~ 0
+PB7
+Text Label 7600 5900 0    60   ~ 0
+PB6
+Wire Wire Line
+	7800 6200 7350 6200
+Wire Wire Line
+	7800 6100 7350 6100
+Wire Wire Line
+	7800 6000 7350 6000
+Wire Wire Line
+	7800 5900 7350 5900
+Text Label 1700 3250 0    60   ~ 0
+PC0
+Text Label 1700 3350 0    60   ~ 0
+PC1
+Wire Wire Line
+	1700 3250 2000 3250
+Wire Wire Line
+	1700 3350 2000 3350
+Text Label 1700 3450 0    60   ~ 0
+PC2
+Text Label 1700 3550 0    60   ~ 0
+PC3
+Wire Wire Line
+	1700 3450 2000 3450
+Wire Wire Line
+	1700 3550 2000 3550
+Text Label 7624 6700 0    60   ~ 0
+PC0
+Text Label 7624 6800 0    60   ~ 0
+PC1
+Wire Wire Line
+	7350 6700 7800 6700
+Wire Wire Line
+	7350 6800 7800 6800
+Text Label 7624 6900 0    60   ~ 0
+PC2
+Text Label 7624 7000 0    60   ~ 0
+PC3
+Wire Wire Line
+	7350 6900 7800 6900
+Wire Wire Line
+	7350 7000 7800 7000
+$Comp
+L GND #PWR?
+U 1 1 513B9BEC
+P 7500 7250
+F 0 "#PWR?" H 7500 7250 30  0001 C CNN
+F 1 "GND" H 7500 7180 30  0001 C CNN
+	1    7500 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 7100 7500 7250
+Wire Wire Line
+	7350 7100 7500 7100
 $EndSCHEMATC
