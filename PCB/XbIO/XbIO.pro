@@ -1,6 +1,6 @@
 esupdate=Mon 13 Aug 2012 02:08:00 PM COT
 last_client=eeschema
-update=Sat 09 Mar 2013 12:11:15 PM COT
+update=Sat 09 Mar 2013 02:37:23 PM COT
 [general]
 version=1
 [cvpcb]
@@ -129,7 +129,7 @@ LibName99=MHOLE
 [eeschema]
 version=1
 LibDir=../libs
-NetFmtName=Pcbnew
+NetFmtName=PcbnewAdvanced
 RptD_X=0
 RptD_Y=100
 RptLab=1
@@ -172,3 +172,4 @@ LibName34=../libs/tq-relay
 LibName35=../libs/ps2802-4
 LibName36=sw_push
 LibName37=cd4049
+LibName38=usb_2a

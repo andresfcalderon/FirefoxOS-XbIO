@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Sat 09 Mar 2013 02:26:11 PM COT
+EESchema Schematic File Version 2  date Sat 09 Mar 2013 03:23:56 PM COT
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -36,6 +36,7 @@ LIBS:tq-relay
 LIBS:ps2802-4
 LIBS:sw_push
 LIBS:cd4049
+LIBS:usb_2a
 EELAYER 27 0
 EELAYER END
 $Descr User 20000 12000
@@ -613,8 +614,6 @@ F 1 "+5V" H 7000 740 30  0000 C CNN
 	1    7000 650 
 	1    0    0    -1  
 $EndComp
-Text Label 5030 2850 0    60   ~ 0
-REL8
 Text Label 1700 5500 0    60   ~ 0
 REL5
 Text Label 1700 5600 0    60   ~ 0
@@ -667,10 +666,6 @@ Text Label 1400 4350 0    60   ~ 0
 PB7
 Text Label 1400 4250 0    60   ~ 0
 PB6
-Text Label 5228 3050 0    60   ~ 0
-nDCIN5
-Text Label 5228 2750 0    60   ~ 0
-nDCIN4
 $Comp
 L CONN_1 P18
 U 1 1 504E38E9
@@ -888,8 +883,6 @@ Wire Wire Line
 	1700 5600 2000 5600
 Wire Wire Line
 	1700 5500 2000 5500
-Wire Wire Line
-	5250 2850 4950 2850
 Connection ~ 7000 1350
 Wire Wire Line
 	7000 1250 7000 1450
@@ -1132,9 +1125,7 @@ Wire Wire Line
 Wire Wire Line
 	2000 4250 1400 4250
 Wire Wire Line
-	4950 3050 5550 3050
-Wire Wire Line
-	4950 2750 5550 2750
+	4950 3350 5550 3350
 Wire Wire Line
 	8250 1950 8250 2050
 Wire Wire Line
@@ -1183,20 +1174,20 @@ Wire Wire Line
 $Comp
 L CONN_6 P2
 U 1 1 513B7F29
-P 10050 7200
-F 0 "P2" V 10000 7200 60  0000 C CNN
-F 1 "PIN_ARRAY-6X1" V 10100 7200 60  0000 C CNN
-	1    10050 7200
-	1    0    0    -1  
+P 8150 6150
+F 0 "P2" V 8100 6150 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 8200 6150 60  0001 C CNN
+	1    8150 6150
+	-1   0    0    1   
 $EndComp
 $Comp
 L CONN_6 P1
 U 1 1 513B7F56
-P 10050 6350
-F 0 "P1" V 10000 6350 60  0000 C CNN
-F 1 "PIN_ARRAY-6X1" V 10100 6350 60  0000 C CNN
-	1    10050 6350
-	1    0    0    -1  
+P 8150 6850
+F 0 "P1" V 8100 6850 60  0000 C CNN
+F 1 "PIN_ARRAY-6X1" V 8200 6850 60  0001 C CNN
+	1    8150 6850
+	-1   0    0    1   
 $EndComp
 $Comp
 L CONN_6 P4
@@ -1289,10 +1280,10 @@ Wire Wire Line
 Wire Wire Line
 	7350 7000 7800 7000
 $Comp
-L GND #PWR?
+L GND #PWR033
 U 1 1 513B9BEC
 P 7500 7250
-F 0 "#PWR?" H 7500 7250 30  0001 C CNN
+F 0 "#PWR033" H 7500 7250 30  0001 C CNN
 F 1 "GND" H 7500 7180 30  0001 C CNN
 	1    7500 7250
 	1    0    0    -1  
@@ -1301,4 +1292,156 @@ Wire Wire Line
 	7500 7100 7500 7250
 Wire Wire Line
 	7350 7100 7500 7100
+$Comp
+L USB_2A J2
+U 1 1 513BA06C
+P 8200 3800
+F 0 "J2" H 8125 4050 60  0000 C CNN
+F 1 "USBA" H 8250 3500 60  0001 C CNN
+F 2 "USBA" H 8200 3800 60  0001 C CNN
+F 4 "VCC" H 8525 3950 50  0001 C CNN "VCC"
+F 5 "D+" H 8500 3850 50  0001 C CNN "Data+"
+F 6 "D-" H 8500 3750 50  0001 C CNN "Data-"
+F 7 "GND" H 8525 3650 50  0001 C CNN "Ground"
+	1    8200 3800
+	1    0    0    -1  
+$EndComp
+Text Label 5400 3800 0    60   ~ 0
+ARM_DM
+Wire Wire Line
+	4950 3700 5750 3700
+Text Label 5400 3700 0    60   ~ 0
+ARM_DP
+Wire Wire Line
+	8400 3850 9200 3850
+Text Label 8850 3850 0    60   ~ 0
+ARM_DM
+Wire Wire Line
+	8400 3750 9200 3750
+Text Label 8850 3750 0    60   ~ 0
+ARM_DP
+$Comp
+L +5V #PWR034
+U 1 1 513BA242
+P 8500 3600
+F 0 "#PWR034" H 8500 3690 20  0001 C CNN
+F 1 "+5V" H 8500 3690 30  0000 C CNN
+	1    8500 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR035
+U 1 1 513BA249
+P 8550 4050
+F 0 "#PWR035" H 8550 4050 30  0001 C CNN
+F 1 "GND" H 8550 3980 30  0001 C CNN
+	1    8550 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3950 8550 3950
+Wire Wire Line
+	8550 3950 8550 4050
+Wire Wire Line
+	8400 3650 8500 3650
+Wire Wire Line
+	8500 3650 8500 3600
+Wire Wire Line
+	7600 3650 7600 3950
+Connection ~ 7600 3750
+Connection ~ 7600 3850
+Wire Wire Line
+	4950 2750 5500 2750
+Text Label 5300 2750 0    60   ~ 0
+PD2
+Wire Wire Line
+	8500 5900 9050 5900
+Wire Wire Line
+	8500 6000 9050 6000
+Text Label 8850 6000 0    60   ~ 0
+PD2
+Wire Wire Line
+	4950 2950 5500 2950
+Text Label 5300 2950 0    60   ~ 0
+PC12
+Text Label 8800 5900 0    60   ~ 0
+PC12
+Text Label 1400 5250 0    60   ~ 0
+PC11
+Text Label 1400 5150 0    60   ~ 0
+PC10
+Wire Wire Line
+	2000 5250 1400 5250
+Wire Wire Line
+	2000 5150 1400 5150
+Text Label 8800 6200 0    60   ~ 0
+PC11
+Text Label 8800 6100 0    60   ~ 0
+PC10
+Wire Wire Line
+	9100 6200 8500 6200
+Wire Wire Line
+	9100 6100 8500 6100
+Text Label 8850 6400 0    60   ~ 0
+TXD
+Text Label 8850 6300 0    60   ~ 0
+RXD
+Wire Wire Line
+	8500 6300 9000 6300
+Wire Wire Line
+	8500 6400 9000 6400
+Wire Wire Line
+	4950 3450 5550 3450
+Text Label 5400 3350 0    60   ~ 0
+PC8
+Text Label 5400 3450 0    60   ~ 0
+PC9
+Wire Wire Line
+	8500 6700 9100 6700
+Wire Wire Line
+	8500 6600 9100 6600
+Text Label 8950 6700 0    60   ~ 0
+PC8
+Text Label 8950 6600 0    60   ~ 0
+PC9
+$Comp
+L GND #PWR?
+U 1 1 513BC031
+P 8650 7250
+F 0 "#PWR?" H 8650 7250 30  0001 C CNN
+F 1 "GND" H 8650 7180 30  0001 C CNN
+	1    8650 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 7100 8650 7250
+Wire Wire Line
+	8500 7100 8650 7100
+$Comp
+L +3.3V #PWR?
+U 1 1 513BC039
+P 9400 7000
+F 0 "#PWR?" H 9400 6960 30  0001 C CNN
+F 1 "+3.3V" H 9400 7110 30  0000 C CNN
+	1    9400 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 7000 9400 7000
+Wire Wire Line
+	4950 3150 5550 3150
+Wire Wire Line
+	4950 3250 5550 3250
+Text Label 5400 3150 0    60   ~ 0
+PC6
+Text Label 5400 3250 0    60   ~ 0
+PC7
+Wire Wire Line
+	8500 6800 9100 6800
+Wire Wire Line
+	8500 6900 9100 6900
+Text Label 8950 6800 0    60   ~ 0
+PC7
+Text Label 8950 6900 0    60   ~ 0
+PC6
 $EndSCHEMATC
