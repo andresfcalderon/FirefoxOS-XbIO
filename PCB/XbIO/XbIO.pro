@@ -1,6 +1,6 @@
 esupdate=Mon 13 Aug 2012 02:08:00 PM COT
 last_client=eeschema
-update=Thu 20 Sep 2012 12:59:02 PM COT
+update=Sat 09 Mar 2013 12:11:15 PM COT
 [general]
 version=1
 [cvpcb]
@@ -130,9 +130,6 @@ LibName99=MHOLE
 version=1
 LibDir=../libs
 NetFmtName=Pcbnew
-HPGLSpd=20
-HPGLDm=15
-HPGLNum=1
 RptD_X=0
 RptD_Y=100
 RptLab=1
@@ -173,8 +170,5 @@ LibName32=../libs/lt1117cst
 LibName33=../libs/ABM8G
 LibName34=../libs/tq-relay
 LibName35=../libs/ps2802-4
-LibName36=../components/usbconn
-LibName37=../components/usb-mini
-LibName38=../library/sp481
-LibName39=sw_push
-LibName40=cd4049
+LibName36=sw_push
+LibName37=cd4049
