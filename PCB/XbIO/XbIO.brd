@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 PCBNEW-BOARD Version 2 date Sat 09 Mar 2013 03:55:35 PM COT
-=======
-PCBNEW-BOARD Version 2 date sáb 09 mar 2013 16:02:05 COT
->>>>>>> e9435e6ddfc2fb0e0b55c100327bc08e8c0c1517
 
 # Created by Pcbnew(2013-mar-08)-testing
 
@@ -13,13 +9,8 @@ LayerCount 2
 EnabledLayers 1FFF8001
 Links 118
 NoConn 1
-<<<<<<< HEAD
 Di 150.57112 46.08322 203.944221 116.451161
 Ndraw 10
-=======
-Di 113.899949 35.899089 226.099371 141.100811
-Ndraw 20
->>>>>>> e9435e6ddfc2fb0e0b55c100327bc08e8c0c1517
 Ntrack 474
 Nzone 0
 BoardThickness 1.6002
